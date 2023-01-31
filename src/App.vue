@@ -11,6 +11,7 @@
         <input type="text" v-model="newItem" placeholder="Add Item" />
         <button @click="addItem">Add</button>
       </div>
+      <button id="reset" @click="items.splice">Reset</button>
     </div>
   </body>
 </template>
@@ -43,6 +44,7 @@ function removeItem(item) {
     items.value.splice(index, 1);
   }
 }
+
 </script>
 
 <style scoped>
@@ -97,5 +99,11 @@ button {
   border-radius: 100%;
   font-size: 1rem;
   background-color: rgb(226, 79, 79);
+}
+
+#reset {
+  background-color: rgb(226, 79, 79);
+  color: white;
+  margin-top: 1rem;
 }
 </style>
